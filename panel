@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Fire - Panel Gamer</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+    body {
+        font-family: 'Orbitron', sans-serif;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        color: #00fff7;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+    }
+
+    header {
+        background: #ff005c;
+        padding: 25px;
+        text-shadow: 0 0 10px #fff, 0 0 20px #ff00c8, 0 0 30px #ff005c;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 2em;
+        color: #00ffea;
+    }
+
+    .container {
+        margin: 30px auto;
+        padding: 25px;
+        background-color: rgba(0,0,0,0.7);
+        border-radius: 15px;
+        max-width: 700px;
+        box-shadow: 0 0 20px #ff00c8, 0 0 40px #00fff7;
+    }
+
+    h2 {
+        color: #ff00ff;
+        text-shadow: 0 0 5px #ff00ff;
+        margin-bottom: 20px;
+    }
+
+    button {
+        background: linear-gradient(45deg, #ff005c, #ff00c8);
+        border: none;
+        padding: 15px 30px;
+        margin: 10px;
+        border-radius: 10px;
+        color: #fff;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+        transition: all 0.3s ease;
+        box-shadow: 0 0 10px #ff00c8, 0 0 20px #ff005c;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #ff00c8, 0 0 30px #ff005c, 0 0 40px #00fff7;
+    }
+
+    .message {
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #00ffea;
+        text-shadow: 0 0 10px #00fff7;
+        min-height: 24px;
+        margin-bottom: 20px;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 15px;
+        border-top: 1px solid #444;
+        color: #ff00c8;
+        text-shadow: 0 0 5px #ff00c8;
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>🔥 Free Fire - Panel Gamer ⚡</h1>
+</header>
+
+<div class="container">
+    <h2>⚡ Rendimiento 💥</h2>
+    <!-- Comandos de Rendimiento -->
+    <button onclick="ejecutarComando('Cerrar apps', 'msgCerrar')">🗑️ Cerrar apps</button>
+    <div id="msgCerrar" class="message"></div>
+
+    <button onclick="ejecutarComando('Reducir gráficos', 'msgRend')">🎨 Reducir gráficos</button>
+    <button onclick="ejecutarComando('Modo alto rendimiento', 'msgRend')">⚡ Modo alto rendimiento</button>
+    <button onclick="ejecutarComando('Limpiar caché', 'msgRend')">🧹 Limpiar caché</button>
+    <div id="msgRend" class="message"></div>
+</div>
+
+<div class="container">
+    <h2>🎯 Sensibilidad 💎</h2>
+    <!-- Sensibilidad/DPI -->
+    <button onclick="ejecutarComando('DPI', 'msgSens')">🎯 DPI</button>
+    <button onclick="ejecutarComando('Sensibilidad', 'msgSens')">🕹️ Sensibilidad</button>
+    <button onclick="ejecutarComando('Miras', 'msgSens')">🔫 Miras</button>
+    <button onclick="ejecutarComando('Gráficos', 'msgSens')">🌈 Gráficos</button>
+    <div id="msgSens" class="message"></div>
+</div>
+
+<footer>
+    💥 Hecho por Ado - Panel Gamer Free Fire 💥
+</footer>
+
+<script>
+function ejecutarComando(tipo, divId) {
+    const emojis = "🔥💎⚡💥🎮"; // emojis random
+    const mensajeDiv = document.getElementById(divId);
+    mensajeDiv.innerText = `${tipo} ajustado con éxito ✅ ${emojis}`;
+}
+</script>
+
+</body>
+</html>
